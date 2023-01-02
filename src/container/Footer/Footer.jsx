@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { BsTwitter, BsInstagram } from 'react-icons/bs';
+import { FaFacebookF } from 'react-icons/fa';
+import {AiFillGithub } from 'react-icons/ai';
 
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
+
 
 import './Footer.scss';
 
@@ -55,6 +59,29 @@ const Footer = () => {
         </div>
       </div>
 
+        <div className="app__social-footer">
+          <div>
+            <a href="https://github.com/Nazmul6180" target="_blank" rel="noreferrer">
+              <AiFillGithub/>
+            </a>
+          </div>
+          <div>
+            <a href="https://twitter.com/8Nazmul" target="_blank" rel="noreferrer">
+              <BsTwitter/>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.facebook.com/identical.nazmul" target="_blank" rel="noreferrer">
+              <FaFacebookF/>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/identicalnazmul/" target="_blank" rel="noreferrer">
+              <BsInstagram/>
+            </a>
+          </div>
+        </div>
+
       {!isFormSubmitted ? 
       <div className="app__footer-form app__flex">
         <div className="app__flex">
@@ -63,6 +90,8 @@ const Footer = () => {
         <div className="app__flex">
           <input className="p-text" type="email" placeholder="Your Email" name='email' value={email} onChange={handleChangeInput } />
         </div>
+
+
           <div>
             <textarea
               className="p-text"
